@@ -13,9 +13,8 @@ void Solution(int &s, int&big)
         a.push_back(input);
     }
 
-
-
     vector<int> b;
+    
     int max1 = *max_element(a.begin(),a.end());
     int min1 = *min_element(a.begin(),a.end());
 
@@ -32,7 +31,6 @@ void Solution(int &s, int&big)
 void MaxDifferent(int &n, vector<int>&cases)
 {
     cin >> n;
-
     for (int i=0; i<n; i++){
         bool done=false;
         int big=0;
@@ -40,7 +38,7 @@ void MaxDifferent(int &n, vector<int>&cases)
         cin >> input;
         if (input==2){
             vector<int> temp;
-            for (int j=0; j<2; j++){
+            for (int j=0; j<input; j++){
                 int input2;
                 cin >> input2;
                 temp.push_back(input2);
@@ -54,6 +52,7 @@ void MaxDifferent(int &n, vector<int>&cases)
         cases.push_back(big);
         }
     }
+    
     for (int i=0; i<cases.size(); i++) cout << cases[i] << endl;
 }
 
