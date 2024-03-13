@@ -30,7 +30,7 @@ void solution(int &s, int&big)
     big = (max1-min1)+(max2-min2);
 }
 
-void Nhap(int &n, vector<int>&cases)
+void MaxDifferent(int &n, vector<int>&cases)
 {
     cin >> n;
 
@@ -60,9 +60,7 @@ void Nhap(int &n, vector<int>&cases)
 
 int main()
 {
-    int big=0;
     vector<int>cases;
-    vector<int>vt;
     int n;
-    Nhap(n, cases);
+    MaxDifferent(n, cases);
 }
