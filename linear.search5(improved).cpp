@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void solution(int &s, int&big)
+void Solution(int &s, int&big)
 {
     vector<int> a;
     for (int i=0; i<s; i++){
@@ -51,7 +51,7 @@ void MaxDifferent(int &n, vector<int>&cases)
             done = true;
         }
         if (!done){
-        solution(input, big);
+        Solution(input, big);
         cases.push_back(big);
         }
     }
