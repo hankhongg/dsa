@@ -23,7 +23,8 @@ void Solution(int& s, int& big)
 
     int t=0, t1=0;
     bool f_max=false, f_min=false;
-
+    
+    //loại max ra khỏi mảng
     for (;t<a.size(); t++){
         if (a[t]==max1){
             f_max=true;
@@ -37,7 +38,8 @@ void Solution(int& s, int& big)
             b.push_back(a[t]);
         }
     }
-
+    
+    //loại min ra khỏi mảng
     for (;t1<b.size();t1++){
         if (b[t1]==min1){
             f_min=true;
@@ -52,6 +54,7 @@ void Solution(int& s, int& big)
         }
     }
 
+    //nếu c không trống thì tính bình thường, không thì trả về 0
     if (!c.empty()){
     int max2 = *max_element(c.begin(),c.end());
     int min2 = *min_element(c.begin(),c.end());
