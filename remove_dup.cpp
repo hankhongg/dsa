@@ -15,7 +15,7 @@ public:
 
         ListNode *dummy;
         dummy = new ListNode();
-        dummy->val=-1000;
+        dummy->val=-1000;    // set giá trị ban đầu của dummy = -1000
 
         dummy->next=head;
         ListNode* cur = head;
