@@ -63,9 +63,9 @@ void Xuat(const DATHUC& B) {
 	Node* p = B.head;
 	Node* temp = B.head;
 	int count = 0, dem = 0;
-	bool isFirstTerm = true; // Flag to check if it's the first term
+	bool isFirstTerm = true; // check xem no co la don thuc dau tien
 
-	// Check if the polynomial is empty
+	// check xem da thuc co rong khong
 	if (p == nullptr) {
 		cout << "0";
 		return;
@@ -81,10 +81,10 @@ void Xuat(const DATHUC& B) {
 		delete temp;
 	}
 
-	// Iterate through the linked list and print each term
+	// chay i va in tung don thuc
 	while (p != nullptr) {
-		if (p->data->heso != 0) { // Only print non-zero terms
-			// Handle the sign (+/-)
+		if (p->data->heso != 0) { // don thuc = 0 thi khong in
+			// them dau +/- khi can
 			if (!isFirstTerm) {
 				cout << (p->data->heso > 0 ? "+" : "-");
 			}
@@ -92,12 +92,12 @@ void Xuat(const DATHUC& B) {
 				cout << "-";
 			}
 
-			// Print the coefficient if it's not 1 or -1, or if it's the constant term
+			// in he so neu he so khac +-1 hoac so mu = 0 
 			if (abs(p->data->heso) != 1 || p->data->somu == 0) {
 				cout << abs(p->data->heso);
 			}
 
-			// Print the variable part
+			// in x^ 
 			if (p->data->somu > 0) {
 				cout << "x";
 				if (p->data->somu > 1) {
@@ -105,9 +105,9 @@ void Xuat(const DATHUC& B) {
 				}
 			}
 
-			isFirstTerm = false; // After the first term, all subsequent terms are not the first
+			isFirstTerm = false; // sau mot lan chay thi don thuc khong con la don thuc dau tien nua
 		}
-		p = p->next; // Move to the next term
+		p = p->next; // tro sang don thuc tiep theo trong da thuc
 	}
 }
 
